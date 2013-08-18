@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # :attr_accessible :title, :body
 
-  validates_presence_of :name
+    has_many :pins, :dependent => :destroy
 end
